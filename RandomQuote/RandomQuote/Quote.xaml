@@ -3,18 +3,18 @@
     x:Class="RandomQuote.Quote"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Start">
         <Button
             x:name="btnNext"
             Clicked="btnNext_Click"
             Text="Next" />
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='Value is {0:F2}'}" />
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="Center">
+            <Label Text="{Binding Source={x:Reference Slider}, Path=Value, StringFormat='Value is {0:F2}'}" />
             <Slider
-                x:Name="slider"
+                x:Name="Slider"
                 Maximum="50"
                 Minimum="16" />
-            <Label x:Name="lblQuote" FontSize="{Binding Source={x:Reference slider}, Path=Value}" />
+            <Label x:Name="LblQuote" FontSize="{Binding Source={x:Reference Slider}, Path=Value}" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

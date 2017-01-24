@@ -50,7 +50,7 @@ namespace RandomQuote
             var x = new Random();
             int nextIndex = x.Next(0, _quotes.Length - 1);
 
-            lblQuote.Text = _quotes[nextIndex];
+            LblQuote.Text = _quotes[nextIndex];
         }
     }
 }
